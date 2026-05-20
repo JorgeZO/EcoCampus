@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1300 600" font-family="Arial, sans-serif" font-size="11">
+  <style>
+    .title { font-size: 18px; font-weight: bold; fill: #1f3a8a; }
+    .frame { fill: #fff; stroke: #cbd5e1; stroke-width: 1.5; }
+    .bar { fill: #1f3a8a; }
+    .text { fill: #0f172a; }
+    .muted { fill: #64748b; font-size: 10px; }
+    .btn { fill: #1f3a8a; }
+    .btn-text { fill: #fff; text-anchor: middle; font-weight: bold; }
+    .kpi { fill: #eef2ff; stroke: #c7d2fe; }
+    .crit { fill: #fee2e2; stroke: #fca5a5; }
+  </style>
+
+  <text x="650" y="28" text-anchor="middle" class="title">Mockups - EcoMonitor Industrial</text>
+
+  <!-- ====== Pantalla 1: Login ====== -->
+  <g transform="translate(20, 60)">
+    <rect width="280" height="500" rx="6" class="frame" />
+    <text x="140" y="20" text-anchor="middle" font-weight="bold" fill="#1f3a8a">1. Login</text>
+    <rect x="100" y="80" width="80" height="80" rx="10" fill="#1f3a8a" />
+    <text x="140" y="128" text-anchor="middle" fill="#fff" font-size="22" font-weight="bold">EM</text>
+    <text x="140" y="180" text-anchor="middle" font-weight="bold" font-size="14">EcoMonitor Industrial</text>
+    <text x="140" y="200" text-anchor="middle" class="muted">Monitoreo ambiental y energético</text>
+
+    <text x="40" y="240" class="muted">Correo</text>
+    <rect x="40" y="248" width="200" height="32" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="50" y="270" class="text">admin@ecomonitor.mx</text>
+
+    <text x="40" y="300" class="muted">Contraseña</text>
+    <rect x="40" y="308" width="200" height="32" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="50" y="330" class="text">••••••••</text>
+
+    <rect x="40" y="360" width="200" height="40" rx="6" class="btn" />
+    <text x="140" y="386" class="btn-text">Iniciar sesión</text>
+
+    <text x="140" y="430" text-anchor="middle" class="muted">3 roles: admin · operador · auditor</text>
+  </g>
+
+  <!-- ====== Pantalla 2: Dashboard ====== -->
+  <g transform="translate(330, 60)">
+    <rect width="600" height="500" rx="6" class="frame" />
+    <text x="300" y="20" text-anchor="middle" font-weight="bold" fill="#1f3a8a">2. Dashboard</text>
+
+    <rect x="0" y="32" width="600" height="32" class="bar" />
+    <text x="14" y="53" fill="#fff" font-weight="bold">EM · EcoMonitor</text>
+    <text x="450" y="53" fill="#fff">Admin · Reporte · Salir</text>
+
+    <text x="14" y="92" font-weight="bold" font-size="14">Dashboard de Operación</text>
+    <text x="14" y="108" class="muted">Planta MetalForge · últimas 24h</text>
+
+    <!-- KPIs -->
+    <g transform="translate(14, 122)">
+      <rect width="115" height="60" class="kpi" rx="4" /><text x="8" y="18" class="muted">Energía total</text><text x="8" y="42" font-weight="bold" font-size="18">9,840 kWh</text>
+      <rect x="125" width="115" height="60" class="kpi" rx="4" /><text x="133" y="18" class="muted">Pico</text><text x="133" y="42" font-weight="bold" font-size="18">680 kWh</text>
+      <rect x="250" width="115" height="60" class="kpi" rx="4" /><text x="258" y="18" class="muted">Agua total</text><text x="258" y="42" font-weight="bold" font-size="18">1,420 m³</text>
+      <rect x="375" width="115" height="60" class="crit" rx="4" /><text x="383" y="18" class="muted">Alertas críticas</text><text x="383" y="42" font-weight="bold" font-size="18" fill="#dc2626">3</text>
+    </g>
+
+    <!-- Gráficas -->
+    <rect x="14" y="200" width="280" height="130" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="22" y="220" font-weight="bold">Consumo de energía</text>
+    <polyline points="22,310 60,290 100,300 140,250 180,275 220,240 260,260 290,235" stroke="#1f3a8a" stroke-width="2" fill="none" />
+
+    <rect x="306" y="200" width="280" height="130" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="314" y="220" font-weight="bold">Consumo de agua</text>
+    <g fill="#4f6dc4">
+      <rect x="320" y="275" width="14" height="50" />
+      <rect x="340" y="260" width="14" height="65" />
+      <rect x="360" y="285" width="14" height="40" />
+      <rect x="380" y="250" width="14" height="75" />
+      <rect x="400" y="270" width="14" height="55" />
+      <rect x="420" y="240" width="14" height="85" />
+      <rect x="440" y="265" width="14" height="60" />
+      <rect x="460" y="280" width="14" height="45" />
+      <rect x="480" y="255" width="14" height="70" />
+      <rect x="500" y="245" width="14" height="80" />
+    </g>
+
+    <!-- Tabla -->
+    <text x="14" y="355" font-weight="bold">Alertas recientes</text>
+    <rect x="14" y="365" width="572" height="120" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="22" y="385" class="muted">SEVERIDAD  ·  TIPO  ·  ÁREA  ·  MENSAJE  ·  HORA</text>
+    <line x1="14" y1="392" x2="586" y2="392" stroke="#cbd5e1" />
+    <text x="22" y="412" fill="#dc2626" font-weight="bold">CRÍTICA</text><text x="120" y="412" class="text">energia · Fundición · Consumo 720 kWh excede umbral</text>
+    <text x="22" y="432" fill="#b45309" font-weight="bold">ADVERTENCIA</text><text x="120" y="432" class="text">agua · Fundición · Consumo cerca del umbral</text>
+    <text x="22" y="452" fill="#dc2626" font-weight="bold">CRÍTICA</text><text x="120" y="452" class="text">ph · Empaque · pH 5.8 fuera de rango</text>
+    <text x="22" y="472" fill="#2563eb" font-weight="bold">INFO</text><text x="120" y="472" class="text">normativa · Reporte SEMARNAT vence en 12 días</text>
+  </g>
+
+  <!-- ====== Pantalla 3: Reporte ====== -->
+  <g transform="translate(960, 60)">
+    <rect width="320" height="500" rx="6" class="frame" />
+    <text x="160" y="20" text-anchor="middle" font-weight="bold" fill="#1f3a8a">3. Reporte imprimible</text>
+
+    <rect x="0" y="32" width="320" height="28" class="bar" />
+    <text x="10" y="51" fill="#fff" font-weight="bold">← Dashboard</text>
+    <rect x="200" y="36" width="110" height="20" fill="#fff" rx="4" />
+    <text x="255" y="50" text-anchor="middle" fill="#1f3a8a" font-weight="bold">Imprimir / PDF</text>
+
+    <text x="14" y="90" font-weight="bold" font-size="14">Reporte de Métricas</text>
+    <text x="14" y="106" class="muted">MetalForge · 19/may/2026 · últimas 24h</text>
+
+    <text x="14" y="135" font-weight="bold">1. Indicadores de consumo</text>
+    <rect x="14" y="142" width="292" height="100" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="22" y="160" class="text">Energía total: 9,840 kWh</text>
+    <text x="22" y="178" class="text">Promedio: 102 kWh / muestra</text>
+    <text x="22" y="196" class="text">Pico: 680 kWh</text>
+    <text x="22" y="214" class="text">Agua total: 1,420 m³</text>
+    <text x="22" y="232" class="text">pH promedio: 7.12</text>
+
+    <text x="14" y="262" font-weight="bold">2. Alertas</text>
+    <rect x="14" y="270" width="292" height="80" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="22" y="290" fill="#dc2626" font-weight="bold">Críticas: 3</text>
+    <text x="22" y="310" fill="#b45309" font-weight="bold">Advertencias: 5</text>
+    <text x="22" y="330" fill="#2563eb" font-weight="bold">Informativas: 1</text>
+
+    <text x="14" y="372" font-weight="bold">3. Cumplimiento normativo</text>
+    <rect x="14" y="380" width="292" height="90" fill="#f8fafc" stroke="#cbd5e1" rx="4" />
+    <text x="22" y="400" fill="#16a34a" font-weight="bold">Al corriente: 2</text>
+    <text x="22" y="420" fill="#b45309" font-weight="bold">En riesgo: 2</text>
+    <text x="22" y="440" fill="#dc2626" font-weight="bold">Vencidas: 1</text>
+    <text x="22" y="458" class="muted">Total: 5 obligaciones</text>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoMonitor - Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand"><span class="logo small">EM</span> EcoMonitor</div>
+    <div class="nav-actions">
+      <span id="userBadge" class="user-badge">—</span>
+      <a href="reporte.html" class="btn-secondary">Reporte</a>
+      <button id="logoutBtn" class="btn-ghost">Salir</button>
+    </div>
+  </nav>
+
+  <main class="container">
+    <h1>Dashboard de Operación</h1>
+    <p class="subtitle">Planta MetalForge de Occidente · últimas 24 horas</p>
+
+    <section class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Energía total (24h)</div>
+        <div class="kpi-value"><span id="kpiEnergy">—</span> <small>kWh</small></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Pico de consumo</div>
+        <div class="kpi-value"><span id="kpiPeak">—</span> <small>kWh</small></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Agua total (24h)</div>
+        <div class="kpi-value"><span id="kpiWater">—</span> <small>m³</small></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">pH promedio</div>
+        <div class="kpi-value"><span id="kpiPh">—</span></div>
+      </div>
+      <div class="kpi-card alert-critical">
+        <div class="kpi-label">Alertas críticas</div>
+        <div class="kpi-value"><span id="kpiAlerts">—</span></div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Obligaciones en riesgo</div>
+        <div class="kpi-value"><span id="kpiAtRisk">—</span> / <span id="kpiObTotal">—</span></div>
+      </div>
+    </section>
+
+    <section class="charts-grid">
+      <div class="card">
+        <h2>Consumo de energía</h2>
+        <canvas id="energyChart"></canvas>
+      </div>
+      <div class="card">
+        <h2>Consumo de agua</h2>
+        <canvas id="waterChart"></canvas>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Alertas recientes</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Severidad</th><th>Tipo</th><th>Área</th><th>Mensaje</th><th>Hora</th></tr>
+        </thead>
+        <tbody id="alertsBody">
+          <tr><td colspan="5" class="muted">Cargando…</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="card">
+      <h2>Cumplimiento normativo</h2>
+      <table class="data-table">
+        <thead>
+          <tr><th>Estado</th><th>Entidad</th><th>Obligación</th><th>Vence</th></tr>
+        </thead>
+        <tbody id="obligationsBody">
+          <tr><td colspan="4" class="muted">Cargando…</td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

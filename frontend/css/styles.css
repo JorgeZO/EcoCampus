@@ -1,0 +1,161 @@
+/* EcoMonitor - estilos */
+:root {
+  --primary: #1f3a8a;
+  --primary-light: #4f6dc4;
+  --bg: #f5f7fb;
+  --card: #ffffff;
+  --text: #0f172a;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --critica: #dc2626;
+  --advertencia: #f59e0b;
+  --info: #2563eb;
+  --ok: #16a34a;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 14px;
+}
+
+h1 { margin: 0 0 .25rem; }
+h2 { margin: 0 0 1rem; font-size: 1.1rem; }
+
+.subtitle { color: var(--muted); margin: 0 0 1.5rem; }
+
+/* ---------- Login ---------- */
+.login-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+}
+.login-card {
+  background: var(--card);
+  padding: 2.5rem;
+  border-radius: 14px;
+  width: 100%;
+  max-width: 380px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, .25);
+}
+.login-card header { text-align: center; margin-bottom: 1.5rem; }
+.logo {
+  width: 56px; height: 56px; line-height: 56px;
+  background: var(--primary); color: #fff;
+  border-radius: 12px; font-weight: 700; font-size: 1.4rem;
+  display: inline-block; margin-bottom: .5rem;
+}
+.logo.small { width: 30px; height: 30px; line-height: 30px; font-size: .8rem; border-radius: 6px; }
+
+form label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: .9rem;
+}
+form input {
+  width: 100%; padding: .65rem .8rem; margin-top: .35rem;
+  border: 1px solid var(--border); border-radius: 8px; font-size: 14px;
+}
+form input:focus { outline: 2px solid var(--primary-light); border-color: var(--primary-light); }
+
+.btn-primary, .btn-secondary, .btn-ghost {
+  cursor: pointer; padding: .65rem 1rem; border-radius: 8px;
+  font-weight: 600; font-size: 14px; border: 1px solid transparent;
+  text-decoration: none; display: inline-block;
+}
+.btn-primary { background: var(--primary); color: #fff; width: 100%; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-light); }
+.btn-secondary { background: #fff; color: var(--primary); border-color: var(--primary); }
+.btn-ghost { background: transparent; color: var(--text); border-color: var(--border); }
+
+.error { color: var(--critica); font-size: 13px; margin-top: .8rem; }
+.hint { color: var(--muted); font-size: 12px; margin-top: 1.5rem; line-height: 1.6; text-align: center; }
+code { background: #eef2ff; padding: 2px 6px; border-radius: 4px; }
+
+/* ---------- Topbar / nav ---------- */
+.topbar {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: .8rem 2rem; background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.brand { font-weight: 700; display: flex; align-items: center; gap: .5rem; color: var(--primary); }
+.nav-actions { display: flex; gap: .6rem; align-items: center; }
+.user-badge { background: #eef2ff; color: var(--primary); padding: .3rem .7rem; border-radius: 999px; font-size: 12px; font-weight: 600; }
+
+/* ---------- Container ---------- */
+.container { max-width: 1200px; margin: 0 auto; padding: 2rem; }
+
+/* ---------- KPI grid ---------- */
+.kpi-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 1.5rem;
+}
+.kpi-card {
+  background: var(--card); padding: 1rem 1.2rem; border-radius: 10px;
+  border: 1px solid var(--border); box-shadow: 0 1px 3px rgba(0, 0, 0, .04);
+}
+.kpi-label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; }
+.kpi-value { font-size: 1.6rem; font-weight: 700; margin-top: .3rem; }
+.kpi-value small { font-size: .8rem; color: var(--muted); font-weight: 500; }
+.kpi-card.alert-critical { border-left: 4px solid var(--critica); }
+
+/* ---------- Charts ---------- */
+.charts-grid {
+  display: grid; gap: 1rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.5rem;
+}
+@media (max-width: 800px) { .charts-grid { grid-template-columns: 1fr; } }
+
+.card {
+  background: var(--card); padding: 1.2rem; border-radius: 10px;
+  border: 1px solid var(--border); margin-bottom: 1.5rem;
+}
+canvas { max-height: 280px; }
+
+/* ---------- Tables ---------- */
+.data-table, .report-table {
+  width: 100%; border-collapse: collapse; font-size: 13px;
+}
+.data-table th, .data-table td,
+.report-table th, .report-table td {
+  text-align: left; padding: .55rem .7rem; border-bottom: 1px solid var(--border);
+}
+.data-table th, .report-table th { background: #f8fafc; color: var(--muted); font-weight: 600; }
+.muted { color: var(--muted); text-align: center; }
+
+.badge {
+  display: inline-block; padding: 2px 8px; border-radius: 999px;
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+}
+.badge.critica       { background: #fee2e2; color: var(--critica); }
+.badge.advertencia   { background: #fef3c7; color: #b45309; }
+.badge.informativa   { background: #dbeafe; color: var(--info); }
+.badge.compliant     { background: #dcfce7; color: var(--ok); }
+.badge.at_risk       { background: #fef3c7; color: #b45309; }
+.badge.overdue       { background: #fee2e2; color: var(--critica); }
+
+.sev-critica { color: var(--critica); font-weight: 600; }
+.sev-advertencia { color: #b45309; font-weight: 600; }
+.sev-info { color: var(--info); font-weight: 600; }
+
+/* ---------- Reporte ---------- */
+.report-page { background: #fff; padding: 2.5rem; max-width: 900px; margin: 2rem auto; border-radius: 8px; border: 1px solid var(--border); }
+.report-header { border-bottom: 2px solid var(--primary); padding-bottom: 1rem; margin-bottom: 1.5rem; }
+.report-meta { display: flex; gap: 2rem; flex-wrap: wrap; color: var(--muted); margin-top: .5rem; font-size: 13px; }
+.report-table { margin-bottom: 1rem; }
+.report-footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid var(--border); color: var(--muted); font-size: 12px; text-align: center; }
+
+@media print {
+  .no-print { display: none !important; }
+  body { background: #fff; }
+  .report-page { box-shadow: none; border: none; margin: 0; padding: 1rem; }
+}

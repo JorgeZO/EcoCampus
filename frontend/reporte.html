@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoMonitor - Reporte de Métricas</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <nav class="topbar no-print">
+    <div class="brand"><span class="logo small">EM</span> EcoMonitor</div>
+    <div class="nav-actions">
+      <a href="dashboard.html" class="btn-ghost">← Dashboard</a>
+      <button id="printBtn" class="btn-primary">Imprimir / Guardar PDF</button>
+    </div>
+  </nav>
+
+  <main class="container report-page">
+    <header class="report-header">
+      <h1>Reporte de Métricas Ambientales y Energéticas</h1>
+      <div class="report-meta">
+        <div><strong>Planta:</strong> <span id="rPlanta">—</span></div>
+        <div><strong>Generado:</strong> <span id="rGenerado">—</span></div>
+        <div><strong>Período:</strong> Últimas 24 horas</div>
+      </div>
+    </header>
+
+    <section>
+      <h2>1. Resumen ejecutivo</h2>
+      <p>
+        El presente reporte consolida las métricas de consumo energético, hídrico, alertas
+        operativas y estado de cumplimiento normativo de la planta durante el período evaluado.
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Indicadores de consumo</h2>
+      <table class="report-table">
+        <thead>
+          <tr><th>Indicador</th><th>Valor</th><th>Unidad</th><th>Muestras</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Energía total</td>     <td id="rEnergyTotal">—</td><td>kWh</td><td id="rEnergyN">—</td></tr>
+          <tr><td>Energía promedio</td>  <td id="rEnergyAvg">—</td>  <td>kWh</td><td id="rEnergyN2">—</td></tr>
+          <tr><td>Pico de consumo</td>   <td id="rEnergyPeak">—</td> <td>kWh</td><td>—</td></tr>
+          <tr><td>Agua total</td>        <td id="rWaterTotal">—</td> <td>m³</td><td id="rWaterN">—</td></tr>
+          <tr><td>pH promedio</td>       <td id="rWaterPh">—</td>    <td>—</td><td id="rWaterN2">—</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>3. Estado de alertas</h2>
+      <table class="report-table">
+        <thead>
+          <tr><th>Severidad</th><th>Cantidad</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sev-critica">Críticas</td>          <td id="rAlertCrit">—</td></tr>
+          <tr><td class="sev-advertencia">Advertencias</td>  <td id="rAlertAdv">—</td></tr>
+          <tr><td class="sev-info">Informativas</td>         <td id="rAlertInfo">—</td></tr>
+          <tr><th>Total</th><th id="rAlertTotal">—</th></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>4. Cumplimiento normativo</h2>
+      <table class="report-table">
+        <thead>
+          <tr><th>Estado</th><th>Obligaciones</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="sev-info">Al corriente (compliant)</td><td id="rObComp">—</td></tr>
+          <tr><td class="sev-advertencia">En riesgo (at_risk)</td><td id="rObRisk">—</td></tr>
+          <tr><td class="sev-critica">Vencidas (overdue)</td><td id="rObOver">—</td></tr>
+          <tr><th>Total</th><th id="rObTotal">—</th></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer class="report-footer">
+      EcoMonitor Industrial · Reporte generado automáticamente · v1.0
+    </footer>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/reporte.js"></script>
+</body>
+</html>

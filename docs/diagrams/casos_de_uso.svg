@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 560" font-family="Arial, sans-serif" font-size="13">
+  <style>
+    .title { font-size: 20px; font-weight: bold; fill: #1f3a8a; }
+    .actor-label { font-size: 14px; font-weight: bold; }
+    .uc { fill: #eef2ff; stroke: #1f3a8a; stroke-width: 1.5; }
+    .uc-text { text-anchor: middle; fill: #1f3a8a; }
+    .system { fill: none; stroke: #1f3a8a; stroke-width: 2; stroke-dasharray: 6 4; }
+    .actor { stroke: #0f172a; stroke-width: 2; fill: none; }
+    .line { stroke: #64748b; stroke-width: 1.2; }
+  </style>
+
+  <text x="450" y="30" text-anchor="middle" class="title">Diagrama de Casos de Uso - EcoMonitor Industrial</text>
+
+  <!-- Sistema -->
+  <rect x="260" y="60" width="380" height="470" rx="14" class="system" />
+  <text x="450" y="82" text-anchor="middle" font-weight="bold" fill="#1f3a8a">Sistema EcoMonitor</text>
+
+  <!-- Actor Operador -->
+  <g transform="translate(80, 180)">
+    <circle cx="0" cy="0" r="14" class="actor" />
+    <line x1="0" y1="14" x2="0" y2="50" class="actor" />
+    <line x1="-22" y1="25" x2="22" y2="25" class="actor" />
+    <line x1="0" y1="50" x2="-20" y2="80" class="actor" />
+    <line x1="0" y1="50" x2="20" y2="80" class="actor" />
+    <text x="0" y="105" text-anchor="middle" class="actor-label">Operador</text>
+  </g>
+
+  <!-- Actor Admin -->
+  <g transform="translate(80, 360)">
+    <circle cx="0" cy="0" r="14" class="actor" />
+    <line x1="0" y1="14" x2="0" y2="50" class="actor" />
+    <line x1="-22" y1="25" x2="22" y2="25" class="actor" />
+    <line x1="0" y1="50" x2="-20" y2="80" class="actor" />
+    <line x1="0" y1="50" x2="20" y2="80" class="actor" />
+    <text x="0" y="105" text-anchor="middle" class="actor-label">Administrador</text>
+  </g>
+
+  <!-- Actor Auditor -->
+  <g transform="translate(820, 270)">
+    <circle cx="0" cy="0" r="14" class="actor" />
+    <line x1="0" y1="14" x2="0" y2="50" class="actor" />
+    <line x1="-22" y1="25" x2="22" y2="25" class="actor" />
+    <line x1="0" y1="50" x2="-20" y2="80" class="actor" />
+    <line x1="0" y1="50" x2="20" y2="80" class="actor" />
+    <text x="0" y="105" text-anchor="middle" class="actor-label">Auditor</text>
+  </g>
+
+  <!-- Casos de uso -->
+  <g>
+    <ellipse cx="450" cy="130" rx="110" ry="28" class="uc" />
+    <text x="450" y="135" class="uc-text">Iniciar sesión</text>
+
+    <ellipse cx="450" cy="195" rx="110" ry="28" class="uc" />
+    <text x="450" y="200" class="uc-text">Ver dashboard de métricas</text>
+
+    <ellipse cx="450" cy="260" rx="110" ry="28" class="uc" />
+    <text x="450" y="265" class="uc-text">Registrar lectura de sensor</text>
+
+    <ellipse cx="450" cy="325" rx="110" ry="28" class="uc" />
+    <text x="450" y="330" class="uc-text">Consultar alertas</text>
+
+    <ellipse cx="450" cy="390" rx="110" ry="28" class="uc" />
+    <text x="450" y="395" class="uc-text">Reconocer alerta</text>
+
+    <ellipse cx="450" cy="455" rx="110" ry="28" class="uc" />
+    <text x="450" y="460" class="uc-text">Generar reporte imprimible</text>
+
+    <ellipse cx="450" cy="510" rx="110" ry="28" class="uc" />
+    <text x="450" y="515" class="uc-text">Consultar obligaciones</text>
+  </g>
+
+  <!-- Líneas Operador -->
+  <line x1="105" y1="200" x2="340" y2="135" class="line" />
+  <line x1="105" y1="200" x2="340" y2="195" class="line" />
+  <line x1="105" y1="200" x2="340" y2="260" class="line" />
+  <line x1="105" y1="200" x2="340" y2="325" class="line" />
+  <line x1="105" y1="200" x2="340" y2="390" class="line" />
+  <line x1="105" y1="200" x2="340" y2="455" class="line" />
+
+  <!-- Líneas Admin (todos) -->
+  <line x1="105" y1="380" x2="340" y2="135" class="line" />
+  <line x1="105" y1="380" x2="340" y2="195" class="line" />
+  <line x1="105" y1="380" x2="340" y2="260" class="line" />
+  <line x1="105" y1="380" x2="340" y2="455" class="line" />
+  <line x1="105" y1="380" x2="340" y2="510" class="line" />
+
+  <!-- Líneas Auditor (solo lectura + reporte) -->
+  <line x1="795" y1="290" x2="560" y2="195" class="line" />
+  <line x1="795" y1="290" x2="560" y2="325" class="line" />
+  <line x1="795" y1="290" x2="560" y2="455" class="line" />
+  <line x1="795" y1="290" x2="560" y2="510" class="line" />
+  <line x1="795" y1="290" x2="560" y2="135" class="line" />
+</svg>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EcoMonitor Industrial - Login</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="login-bg">
+  <main class="login-card">
+    <header>
+      <div class="logo">EM</div>
+      <h1>EcoMonitor Industrial</h1>
+      <p class="subtitle">Monitoreo ambiental y energético</p>
+    </header>
+
+    <form id="loginForm" autocomplete="off">
+      <label>Correo
+        <input type="email" id="email" value="admin@ecomonitor.mx" required />
+      </label>
+      <label>Contraseña
+        <input type="password" id="password" value="demo1234" required />
+      </label>
+      <button type="submit" class="btn-primary">Iniciar sesión</button>
+      <p id="loginError" class="error" hidden></p>
+    </form>
+
+    <footer class="hint">
+      Cuentas demo: <code>admin@ecomonitor.mx</code> · <code>operador@ecomonitor.mx</code> · <code>auditor@ecomonitor.mx</code><br/>
+      Contraseña: <code>demo1234</code>
+    </footer>
+  </main>
+
+  <script src="js/api.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
